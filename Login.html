@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<style>
+   
+    label{
+        color: rgb(244, 254, 255);
+       
+    }
+    body{
+        background-image: url("https://wallpaperaccess.com/full/16692.jpg");
+    }
+    #foot{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-family: 'Times New Roman', Times, serif;
+    }
+ 
+</style>
+</head>
+<body >
+    <nav class="navbar navbar-expand-lg  fixed-top shadow-lg p-1" style="background-color: none">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand ms-2 fs-2 " style="color:aqua;font-family: 'Special Elite', cursive;"><img src="https://media.istockphoto.com/id/1329330337/vector/initial-gold-n-letter-logo-design-n-logo-design-vector-template.jpg?b=1&s=612x612&w=0&k=20&c=Q44I7k3ENMrbPXG5pQMD74ZKiiSR9r7x2JjwPtjhLxQ=" alt="" width="46" height="37" class=" border rounded-5">Naveen <span class="text-warning" style="font-family: 'Special Elite', cursive;">Donthamsetti</span> </a>
+          <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-bg-light"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="About.html" >About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Topics
+                </a>
+                <ul class="dropdown-menu bg-white">
+                  <li><a class="dropdown-item text-dark" href="Mouse.Html">Mouse Operations</a></li>
+                  <li><a class="dropdown-item text-dark" href="Alerts.html">Alerts</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-dark" href="#">Navigatons</a></li>
+                </ul>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li> -->
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!---------------------------------------------------------------->
+    <div class=" d-flex justify-content-center container mt-2 p-5" >
+    <div class="row col-md-8 ">
+        <div class="card  p-2" style="background:linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0)); -webkit-backdrop-filter: blur(20px);backdrop-filter:blur(20px);box-shadow: 0 8px 32px rgba(0, 0, 0, 0.525); border:1px solid rgba(184, 174, 174, 0.847);border-radius: 32px;">
+        <div class="card-header">
+            <h1 class="h2 text-center text-white" style="font-family:sans-serif">Registration Form</h1>
+        </div>
+        <div class="card-body">
+            <form action="Submit.html">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control usrname"  id="usrname" name="usrname" placeholder="Enter UserName" required>
+           
+                <label class="form-label">Firstname</label>
+                <input type="text" class="form-control Firstname"  id="Firstname" name="Firstname" placeholder="Enter Firstname" required>
+
+                <label class="form-label">Lastname</label>
+                <input type="text" class="form-control Lastname"  id="Lastname" name="Lastname" placeholder="Enter Lastname" required>
+
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control Email"  id="Email" name="Email" placeholder="Enter Email" required>
+
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control Password"  id="Password" name="Password" placeholder="Enter Password" required>
+
+                <label class="form-label">State</label>
+                <input type="text" class="form-control State"  id="State" name="State" placeholder="Enter State" required>
+
+                <label class="form-label">Country</label>
+                <input type="text" class="form-control Country"  id="Country" name="Country" placeholder="Enter Country" required>
+
+                <input type="submit"  class="form-control mt-2 text-white" style="background-color: rgb(243, 16, 0);">
+                <div class="card-footer" id="foot">
+                <a class="text-info text-start mt-3" id="link1" class="link1" name="link1" href="#">T&C apply</a>
+                <a style="text-decoration:none;font-family: Philosopher;" class=" h4 text-white text-start mt-3" id="link2" class="link2" name="link2" href="#"><span style="color:rgb(232, 248, 8)">D</span>onthamsetti <span style="color:rgb(217, 249, 12)">N</span>aveen</a>
+                <a class="text-info text-start mt-3" id="link3" class="link3" name="link3" href="#">Thank You!</a>   
+                <!-- <h5 class="text-warning text-center mt-3 " id="last"></h5> -->
+            </div>
+            
+                
+            </form>
+     </div>
+    </div>
+</div>
+   
+<script>
+//     function onsub(){
+//     const username=document.getElementById("usrname").value;
+//     const Firstname=document.getElementById("Firstname").value;
+//     const Lastname=document.getElementById("Lastname").value;
+//     const Email=document.getElementById("Email").value;
+//     const Password=document.getElementById("Password").value;
+//     const State=document.getElementById("State").value;
+//     const Country=document.getElementById("Country").value;
+//     if((username!="")||(Firstname!="")||(Lastname!="")||(Email!="")||(Password!="")||(State!="")||(Country!="")){   
+//       document.getElementById("last").innerHTML="Submitted, Thank you";
+
+// }
+//     }
+  
+
+// const myTimeout = setTimeout(Back, 5000);
+// function Back(){
+//     window.open("https://www.w3schools.com");
+// }
+
+</script>
+
+</body>
+</html>
