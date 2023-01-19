@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textboxes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Libre+Caslon+Display&family=Philosopher&family=Special+Elite&display=swap" rel="stylesheet">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body class="bg bg-dark mt-5 p-3 ">
+   <nav class="navbar navbar-expand-lg  bg-dark fixed-top shadow-lg p-1" >
+      <div class="container-fluid">
+        <a class="navbar-brand text-warning" href="#">Naveen</a>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-bg-light"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#" >About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               Topics
+              </a>
+              <ul class="dropdown-menu bg-white">
+                <li><a class="dropdown-item text-dark" href="https://naveenpaul143.github.io/MouseOperations/btns.html">Mouse Operations</a></li>
+                <li><a class="dropdown-item text-dark" href="https://naveenpaul143.github.io/Selenium/Alerts.html">Alerts</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-dark" href="#">TextBoxes</a></li>
+              </ul>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li> -->
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-warning" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <h3 class="text-center text-light" id="name1"><span style="color:red;
+      ">N</span>aveen <span style="color:red;
+      ">P</span>aul</h3>
+ 
+ 
+ <div class="container border-0">
+  <div class="card d-flex flex-column m-3 p-3">
+      <h2 class="text-center display-5 fst-italic fw-bolder"><u id="txt1" class="txt1" name="txt1">Text Boxes</u></h2>
+   
+  <p>1)click on checkbox</p>
+  <p>2)click on Enabe button & write something in text box</p>
+  <p>3)click on radio button</p>
+  <p>4)Finally click on click Me button</p>
+  <p>5)click on clear button check whether text-boxes & success msg & check box is cleared or not</p>
+  <p>6)click on disable button</p>
+   <input type="text" class="mb-3" disabled="true" id="txtbox" placeholder="write something......">
+   <label class="form-label text-primary">CheckBox</label>
+   <input type="checkbox" class="mt-4" id="checkbox" name="checkbox" class="checkbox">
+   <br><br>
+   <button id="check" class="btn btn-success" onclick="enable()"  name="btn1" class="button1">Enable</button>
+   <button id="check2" class="btn btn-danger mt-3 " onclick="disable()"  name="btn2" class="button2">Disable</button>
+   <br><br><br>
+   <input type="radio" name="gender" id="male" class="m">Male
+   <input type="radio" name="gender" id="female" class="f">Female
+   <br><br><br>
+   <button class="btn btn-success " id="btnlast" class="btnlast" name="btnlast" onclick="btnl()">Click Me</button>
+   <button class="btn btn-danger mt-3" id="btnlast2" class="btnlast2" name="btnlast2" onclick="btn2()">Clear</button>
+</div>
+   <p id="para" class="para" name="para"></p>
+<script>
+    function btn2(){
+        document.getElementById("para").innerHTML="";
+        document.getElementById("checkbox").checked=false
+        document.getElementById("txtbox").value="";
+       // document.getElementById("male").checked=true;
+       
+    }
+    function btnl(){
+       var d=document.getElementById("para");
+       d.innerHTML="Success Thank you!";
+       d.style.color="yellow";
+    }
+    function enable(){
+   var check=document.getElementById("check");
+   var btn=document.getElementById("txtbox");
+   if(check.click){
+    btn.removeAttribute("disabled");
+    btn.focus();
+   }else{
+    btn.disabled="true";
+   }
+ 
+}
+function disable(){
+   var check=document.getElementById("check2");
+   var btn=document.getElementById("txtbox");
+   if(!check.click){
+    btn.removeAttribute("disabled");
+   }else{
+    btn.disabled="true";
+   }
+ 
+}
+</script>
+</body>
+</html>
