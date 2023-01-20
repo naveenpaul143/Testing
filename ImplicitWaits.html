@@ -1,48 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alerts</title>
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>ImplicitWaits</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Libre+Caslon+Display&family=Philosopher&family=Special+Elite&display=swap" rel="stylesheet">
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-<style>
-    
-    a{
-        text-decoration: none;
-        color:black;
-        font-weight: bold;
-
-    }
-    a:hover{
-        color:black;
-    }
-    #btn{
-        background-color: greenyellow;
-
-    }
-    #name1{
-       
-        font-family: 'Philosopher', sans-serif;
-    }
-    #name2{
-        font-family: 'Philosopher', sans-serif;
-        color:rgb(0, 0, 0);
-    }
-    #name1::first-letter{
-        color: red;
-    }
-   
-    
-</style>
 </head>
 <body class="bg bg-dark mt-5 p-3 ">
   <nav class="navbar navbar-expand-lg  fixed-top shadow-lg p-1" style="background-color: none">
@@ -69,7 +39,7 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item text-dark" href="https://www.royalmansour.com" id="last" name="last">PageLoadTimeOut</a></li>
               <li><a class="dropdown-item text-dark" href="https://www.hyrtutorials.com/p/calendar-practice.html" id="cal" name="cal">Calenders</a></li>
-              <li><a class="dropdown-item text-dark" href="ImplicitWaits.html" id="waits" name="waits">Implicit Waits</a></li>
+              <li><a class="dropdown-item text-dark" href="#" id="waits" name="waits">Implicit Waits</a></li>
               <li><a class="dropdown-item text-dark" href="Textboxes.html">TextBoxes</a></li>
               <li><a class="dropdown-item text-dark" href="Explicit.html">Explicit Waits</a></li>
               <li><a class="dropdown-item text-dark" href="frames.html">Frames</a></li>
@@ -88,34 +58,40 @@
     </div>
   </nav>
 
-      <h3 class="text-center" id="name1">N <span style="color: white;">aveen </span><span style="color:red;
-      ">D</span> <span style="color:white">onthamsetti</span></h3>
-   
-   
-   <div class="container border-0">
-    <div class="card d-flex flex-column m-3 p-3">
-        <h2 class="text-center display-5 fst-italic fw-bolder">Alerts</h2>
-    <button class="btn btn-primary m-2" onclick="alt()" name="btn1" id="btn1">Alert</button>
-    <button class="btn btn-warning m-2" onclick="cfm()" name="btn2" id="btn2">Confirm</button>
-    <button class="btn btn-success m-2 " onclick="pmt()" name="btn3" id="btn3">Prompt</button>
-    
-    <h2 id="click" class="text-black text-center"></h2>
+      <!-- <h3 class="text-center mt-2" style="font-family: cursive;" id="name1"><span style="color:red;
+        ">N</span><span style="color: white;">aveen </span><span style="color:red;
+      ">D</span><span style="color:white">onthamsetti</span></h3> -->
+     <div class="container border-0 ">
+        <div class="card d-flex flex-column m-3 p-3  bg-dark">
+            <h2 style="color: rgb(208, 221, 122);" class="text-center display-5 fst-italic fw-semibold"><u>Waits</u></h2>
+            <p class="text-white mt-3">✨ Click the below buttons to display the textboxes.<br>
+                👉 Textbox1 will be displayed after 3 seconds.<br>👉 Textbox2 will be displayed after 6 seconds.</p>        
+          <center><div>
+                <button class="btn btn-info m-2 " onclick="btn1()" name="btn1" id="btn1">Add TextBox-1</button>
+        <button class="btn btn-warning m-2" onclick="btn2()" name="btn2" id="btn2">Add TextBox-2</button>
+        
+    </div></center>
+   <div>
+    <h3 class="text-light mt-2">👀 Show the textboxes here:</h3>
 </div>
 </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+               $("#btn1").prop( "disabled", true );
+              setTimeout(function(){                  
+       $("h3").append("<br><center><input type='text'class='form-control w-25 mt-3'  id='txt1' placeholder='Textbox1'/><center>");
+    }, 3000);
+            });
+           $("#btn2").click(function(){
+              $("#btn2").prop( "disabled", true );
+              setTimeout(function(){
+       $("h3").append("<br><center><input type='text' class='form-control w-25 mt-1' id='txt2' placeholder='Textbox2'/><center>");
+    }, 6000);
+            });
+        });
+    </script>
 
- <script>
-    function alt(){
-        window.alert("Im Alert Box")
-
-    }
-    function cfm(){
-        window.confirm("Im confirm Box")
-
-    }
-    function pmt(){
-        window.prompt("Im prompt box")
-
-    }
-   </script>
 </body>
 </html>

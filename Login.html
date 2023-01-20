@@ -52,8 +52,11 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item text-dark" href="https://www.royalmansour.com" id="last" name="last">PageLoadTimeOut</a></li>
                   <li><a class="dropdown-item text-dark" href="https://www.hyrtutorials.com/p/calendar-practice.html" id="cal" name="cal">Calenders</a></li>
-                  <li><a class="dropdown-item text-dark" href="https://www.hyrtutorials.com/p/waits-demo.html" id="waits" name="waits">Waits</a></li>
+                  <li><a class="dropdown-item text-dark" href="ImplicitWaits.html" id="waits" name="waits">Implicit Waits</a></li>
                   <li><a class="dropdown-item text-dark" href="Textboxes.html">TextBoxes</a></li>
+                  <li><a class="dropdown-item text-dark" href="Explicit.html">Explicit Waits</a></li>
+                  <li><a class="dropdown-item text-dark" href="frames.html">Frames</a></li>
+                  <li><a class="dropdown-item text-dark" href="windowhandle.html">Window Handles</a></li>
                 </ul>
               </li>
               <!-- <li class="nav-item">
@@ -70,7 +73,7 @@
     <!---------------------------------------------------------------->
   
     <div class=" d-flex justify-content-center container mt-2 p-5" >
-    <div class="row col-md-8 ">
+    <div class="row col-md-8 mt-3">
  <marquee scrollamout="50" direction="left" width="50%" style="color: rgb(208, 255, 0);">👇👇Hello, Give Dummy Data Here to test this website...👇👇</marquee>
         <div class="card  p-2" style="background:linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0)); -webkit-backdrop-filter: blur(20px);backdrop-filter:blur(20px);box-shadow: 0 8px 32px rgba(0, 0, 0, 0.525); border:1px solid rgba(184, 174, 174, 0.847);border-radius: 32px;">
         <div class="card-header">
@@ -78,26 +81,21 @@
         </div>
         <div class="card-body">
             <form action="Submit.html">
-                <label class="form-label">Username</label>
-                <input type="text" class="form-control usrname"  id="usrname" name="usrname" placeholder="Enter UserName" required>
+
            
-                <label class="form-label">Firstname</label>
-                <input type="text" class="form-control Firstname"  id="Firstname" name="Firstname" placeholder="Enter Firstname" required>
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control Username"  id="Username" name="Username" placeholder="Enter Username" required>
 
-                <label class="form-label">Lastname</label>
-                <input type="text" class="form-control Lastname"  id="Lastname" name="Lastname" placeholder="Enter Lastname" required>
-
+              
                 <label class="form-label">Email</label>
                 <input type="text" class="form-control Email"  id="Email" name="Email" placeholder="Enter Email" required>
 
                 <label class="form-label">Password</label>
                 <input type="password" class="form-control Password"  id="Password" name="Password" placeholder="Enter Password" required>
 
-                <label class="form-label">State</label>
-                <input type="text" class="form-control State"  id="State" name="State" placeholder="Enter State" required>
-
-                <label class="form-label">Country</label>
-                <input type="text" class="form-control Country"  id="Country" name="Country" placeholder="Enter Country" required>
+                <label class="form-label">Confirm Password</label>
+                <input type="password" class="form-control Confirm-Password"  id="Confirm-Password" name="Confirm-Password" placeholder="Re-Enter Password" required>
+               
 
                 <input type="submit"  class="form-control mt-2 text-white" style="background-color: rgb(243, 16, 0);">
                 <div class="card-footer" id="foot">
