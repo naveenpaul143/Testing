@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buttons</title>
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Explicit Waits</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Libre+Caslon+Display&family=Philosopher&family=Special+Elite&display=swap" rel="stylesheet">
@@ -15,33 +14,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 <style>
-  
     a{
+        list-style-type:none;
         text-decoration: none;
-        color:black;
-        font-weight: bold;
-
     }
-    a:hover{
-        color:black;
-    }
-    #btn{
-        background-color: greenyellow;
-
-    }
-    #name1{
-       
-        font-family: 'Philosopher', sans-serif;
-    }
-    #name2{
-        font-family: 'Philosopher', sans-serif;
-        color:rgb(0, 0, 0);
-    }
-    #name1::first-letter{
-        color: red;
-    }
-   
-    
 </style>
 </head>
 <body class="bg bg-dark mt-5 p-3 ">
@@ -69,9 +45,9 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item text-dark" href="https://www.royalmansour.com" id="last" name="last">PageLoadTimeOut</a></li>
               <li><a class="dropdown-item text-dark" href="https://www.hyrtutorials.com/p/calendar-practice.html" id="cal" name="cal">Calenders</a></li>
-              <li><a class="dropdown-item text-dark" href="ImplicitWaits.html" id="waits" name="waits">Implicit Waits</a></li>
+              <li><a class="dropdown-item text-dark" href="#" id="waits" name="waits">Implicit Waits</a></li>
               <li><a class="dropdown-item text-dark" href="Textboxes.html">TextBoxes</a></li>
-              <li><a class="dropdown-item text-dark" href="ExplicitWait.html">Explicit Waits</a></li>
+              <li><a class="dropdown-item text-dark" href="#">Explicit Waits</a></li>
               <li><a class="dropdown-item text-dark" href="frames.html">Frames</a></li>
               <li><a class="dropdown-item text-dark" href="WindowHandles.html">Window Handles</a></li>
               <li><a class="dropdown-item text-dark" href="Drop Downs.html">DropDowns</a></li>
@@ -88,41 +64,43 @@
       </div>
     </div>
   </nav>
-    <h3 class="text-center" id="name1">N <span style="color: white;">aveen </span><span style="color:red;
-        ">D</span> <span style="color:white">onthamsetti</span></h3>
-   
-   
-   <div class="container border-0">
-    <div class="card d-flex flex-column m-3 p-3">
-        <h2 class="text-center display-5 fst-italic fw-bolder">Mouse Actions</h2>
-    <button class="btn btn-primary m-2" onclick="click1()" name="btn1" id="btn1">Left click</button>
-    <button class="btn btn-secondary m-2" onmouseover="mouseover()" name="btn2" id="btn2">MouseOver / MoveToElement</button>
-    <button class="btn btn-danger m-2 " ondblclick="dbl()" name="btn3" id="btn3">Double click</button>
-    <button class="btn btn-info m-2" onmouseout="mouseout()" name="btn4" id="btn4">Mouse Out</button>
-    <button class="btn btn-success m-2" onmousewheel="wheel()" name="btn5" id="btn5">scroll mouse wheel</button>
-    <button class="btn btn-light m-2 " id="btn" name="btn6">  👉 Click -><a href="https://swisnl.github.io/jQuery-contextMenu/demo.html">Right click website link</a></button>
-    <h2 id="click" class="text-black text-center"></h2>
+
+      <!-- <h3 class="text-center mt-2" style="font-family: cursive;" id="name1"><span style="color:red;
+        ">N</span><span style="color: white;">aveen </span><span style="color:red;
+      ">D</span><span style="color:white">onthamsetti</span></h3> -->
+     <div class="container border-0 ">
+        <div class="card d-flex flex-column m-3 p-3  bg-dark">
+            <h2 style="color: rgb(208, 221, 122);" class="text-center display-5 fst-italic fw-semibold"><u>Explicit Waits</u></h2>
+            <p class="text-white mt-3">✨ Click the below button to navigate to another Tab.<br>
+                👉 It will take <span style="color: rgb(255, 0, 17); font-weight: 600;" class="h4">5 seconds</span> to load another tab/Web page.</p>        
+          <center><div>
+                <button class="btn btn-warning m-2"  name="btn1" id="btn1"><a href="explicitpractice.html">Click</a</button>
+      
+        
+    </div></center>
+   <div>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IUN664s7N-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IUN664s7N-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IUN664s7N-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IUN664s7N-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IUN664s7N-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IUN664s7N-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IUN664s7N-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 </div>
 </div>
+    </div>
+    <script>
+//    function load() {
+//          setTimeout(myURL, 5000);
+//          var result = document.getElementById("result");
+//          result.innerHTML = `The page will load after delay of 5 seconds using setTimeout()  method.`;
+//       }
 
- <script>
-     function click1(){
-        document.getElementById("click").innerHTML="You clicked";
-     }
-     function dbl(){
-        document.getElementById("click").innerHTML="You double clicked";
-     }
-     function mouseover(){
-        document.getElementById("click").innerHTML="Mouse Over";
-     }
-     function mouseout(){
-        document.getElementById("click").innerHTML="Mouse Out";
-     }
-     function wheel(){
-        document.getElementById("click").innerHTML="you scrolled wheel";
-     }
-    
-
+//       function myURL() {
+//          window.open('https://www.globalsqa.com/samplepagetest/', name = self);
+//       }
  </script>
+  
+
 </body>
 </html>
