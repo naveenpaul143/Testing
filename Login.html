@@ -25,6 +25,35 @@
       font-family: 'Times New Roman', Times, serif;
     }
  
+ #Border-1{
+  border: 5px solid red;
+  
+ }
+ #Border-2{
+  border: 5px solid rgb(97, 235, 6);
+ }
+ #btn1{
+  color:rgb(246, 197, 0);
+  border-radius: 10px;
+ 
+  margin-top: 20px;
+  background-color: rgb(0, 0, 0);
+  font-size: 30px;
+  border: 1px solid yellow;
+ 
+ }
+
+ #btn2{
+  color:rgb(10, 17, 14);
+  border-radius: 10px;
+ 
+  margin-top: 20px;
+  background-color: rgb(19, 253, 113);
+  font-size: 30px;
+  border: 1px solid rgb(235, 14, 102);
+ 
+ }
+
 </style>
 </head>
 <body >
@@ -46,6 +75,7 @@
                 <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="topics" name="topics">
                  Topics
                 </a>
+                
                 <ul class="dropdown-menu bg-white">
                   <li><a class="dropdown-item text-dark" href="Mouse.Html" id="mouse" name="mouse">Mouse Operations</a></li>
                   <li><a class="dropdown-item text-dark" href="Alerts.html" id="alerts" name="alerts">Alerts</a></li>
@@ -66,6 +96,9 @@
               <!-- <li class="nav-item">
                 <a class="nav-link disabled">Disabled</a>
               </li> -->
+              <li class="nav-item">
+                <a class="nav-link text-white" href="home.html" id="logout" name="logout">Logout</a>
+              </li>
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
@@ -78,30 +111,27 @@
   
     <div class=" d-flex justify-content-center container mt-2 p-5" >
     <div class="row col-md-8 mt-3">
- <marquee scrollamout="50" direction="left" width="50%" style="color: rgb(208, 255, 0);">👇👇Hello, Give Dummy Data Here to test this website...👇👇</marquee>
+ <marquee scrollamout="50" direction="left" width="50%" style="color: rgb(208, 255, 0);">👇👇Hello, Guys Test These borders,button by using getCssValue()👇👇</marquee>
         <div class="card  p-2" style="background:linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0)); -webkit-backdrop-filter: blur(20px);backdrop-filter:blur(20px);box-shadow: 0 8px 32px rgba(0, 0, 0, 0.525); border:1px solid rgba(184, 174, 174, 0.847);border-radius: 32px;">
         <div class="card-header">
-            <h1 class="h2 text-center text-white" style="font-family:sans-serif">Registration Form</h1>
+            <h1 class="h2 text-center text-white"  id="heading" style="font-family:sans-serif">Test</h1>
         </div>
         <div class="card-body">
             <form action="Submit.html">
 
            
-                <label class="form-label">Username</label>
-                <input type="text" class="form-control Username"  id="Username" name="Username" placeholder="Enter Username" required>
+                <label class="form-label">Border-1</label>
+                <input type="text" class="form-control "  id="Border-1" name="Border-1" placeholder="Border-1">
 
               
-                <label class="form-label">Email</label>
-                <input type="text" class="form-control Email"  id="Email" name="Email" placeholder="Enter Email" required>
+                <label class="form-label">Border-2</label>
+                <input type="text" class="form-control "  id="Border-2" name="Border-2" placeholder="Border-2" required>
 
-                <label class="form-label">Password</label>
-                <input type="password" class="form-control Password"  id="Password" name="Password" placeholder="Enter Password" required>
-
-                <label class="form-label">Confirm Password</label>
-                <input type="password" class="form-control Confirm-Password"  id="Confirm-Password" name="Confirm-Password" placeholder="Re-Enter Password" required>
+               
                
 
-                <input type="submit"  class="form-control mt-2 text-white" style="background-color: rgb(243, 16, 0);">
+                <center><input type="submit" id="btn1" value="Button-1"></center>
+                <center><input type="submit" id="btn2" value="Button-2"></center>
                 <div class="card-footer" id="foot">
                 <a class="text-info text-start mt-3" id="link1" class="link1" name="link1" href="#">T&C apply</a>
                 <a style="text-decoration:none;font-family: Philosopher;" class=" h4 text-white text-start mt-3" id="link2" class="link2" name="link2" href="#"><span style="color:rgb(232, 248, 8)">D</span>onthamsetti <span style="color:rgb(217, 249, 12)">N</span>aveen</a>
@@ -135,6 +165,8 @@
 // function Back(){
 //     window.open("https://www.w3schools.com");
 // }
+
+
 
 </script>
 
